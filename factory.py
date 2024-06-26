@@ -74,21 +74,16 @@ def get_llm(model_type="OCI"):
     if model_type == "OCI":
         model_id = config["llm"]["oci"]["llm_model"]
 
-        if model_id.startswith("meta"):
-            # selected llama3
-            logger.info("Selected Llama3 as ChatModel...")
+        logger.info("Selected Llama3 as ChatModel...")
 
-            llm = ChatOCIGenAI(
-                model_id=model_id,
-                service_endpoint=config["llm"]["oci"]["endpoint"],
-                compartment_id=COMPARTMENT_ID,
-                is_stream=True,
-                model_kwargs={"temperature": temperature, "max_tokens": max_tokens},
-            )
-        else:
-
-            logger.info("Support for other models in this demo have been removed..")
-            logger.info("Model:", model_id)
+        llm = ChatOCIGenAI(
+            model_id=model_id,
+            service_endpoint=config["llm"]["oci"]["endpoint"],
+            compartment_id=COMPARTMENT_ID,
+            is_stream=True,
+            model_kwargs={"temperature": temperature, "max_tokens": max_tokens},
+        )
+        
     return llm
 
 
