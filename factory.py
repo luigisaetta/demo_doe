@@ -83,7 +83,7 @@ def get_llm(model_type="OCI"):
             is_stream=True,
             model_kwargs={"temperature": temperature, "max_tokens": max_tokens},
         )
-        
+
     return llm
 
 

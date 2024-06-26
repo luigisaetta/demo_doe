@@ -3,6 +3,7 @@
 add_references = true
 do_streaming = true
 hello_msg = "Hello, how can I assist you?"
+
 # title = "AI Assistant with LangChain 🦜"
 title = "AI Assistant for DOE Dubai"
 verbose = false
@@ -38,7 +39,6 @@ embeddings_bit = 32
 
 [reranker]
 add_reranker = false
-cohere_reranker_model = "rerank-multilingual-v3.0"
 
 [retriever]
 top_k = 8
@@ -60,5 +60,4 @@ endpoint = "https://inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com"
 # llm_model = "cohere.command-r-plus"
 llm_model = "meta.llama-3-70b-instruct"
 
-compartment_ocid = "ocid1.compartment.oc1..aaaaaaaaushuwb2evpuf7rcpl4r7ugmqoe7ekmaiik3ra3m7gec3d234eknq"
 
